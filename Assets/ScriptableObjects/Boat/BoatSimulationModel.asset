@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 237072eab210a0441951faf7b5eb8b4f, type: 3}
+  m_Name: BoatSimulationModel
+  m_EditorClassIdentifier: Assembly-CSharp::BoatGame.Boat.BoatSimulationModel
+  weatherModel: {fileID: 11400000, guid: e52b2e42f77d3204784043d81edde362, type: 2}
+  steeringModel: {fileID: 11400000, guid: 5fae78439313aa041a257c2e72051202, type: 2}
+  boatMass: 100
+  boatRotation: 0
+  boatWaterDrag: {x: 10, y: 1}
+  boatWindDrag: {x: 1, y: 0.1}
+  boatSailForce: 10
+  boatSailForceAxialScaleFactors: {x: 0.5, y: 2}
+  boatSailStallAngle: 5
+  boatTurnRate: 20
+  boatPosition: {x: 253.19846, y: -433.0189}
+  boatVelocity: {x: 6.8144174, y: 16.102846}

@@ -1,0 +1,50 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="wind_display" data-source="project://database/Assets/ScriptableObjects/MainUIDataBindingScriptableObject.asset?fileID=11400000&amp;guid=88045a4af9ac0c045b0376269dd407fb&amp;type=2#MainUIDataBindingScriptableObject" style="flex-grow: 1; bottom: 10px; right: 10px; position: absolute; background-color: rgb(60, 60, 60);">
+        <ui:VisualElement name="boat_and_sail" style="flex-grow: 1; flex-direction: row;">
+            <ui:VisualElement name="sail_deployment" style="flex-grow: 1; flex-direction: column-reverse;">
+                <ui:VisualElement name="icon" style="flex-grow: 0; background-image: url(&quot;project://database/Assets/VectorGraphics/sail.svg?fileID=7388822144124034973&amp;guid=aea6ac26641f40946897d2cdcfa92fa0&amp;type=3#sail&quot;); width: 25px; height: 25px; flex-shrink: 0; flex-direction: column-reverse; align-items: center; justify-content: flex-end; margin-top: 3px; margin-right: 3px; margin-bottom: 3px; margin-left: 3px;"/>
+                <ui:VisualElement name="position_slider" style="flex-grow: 1; flex-direction: row; background-color: rgb(255, 255, 255); width: 25%; height: 90%; align-self: center; align-items: center; justify-content: center; margin-top: 8px; margin-right: 8px; margin-bottom: 8px; margin-left: 8px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;">
+                    <ui:VisualElement name="rudder_position_fill" style="height: 100%; width: 100%; background-color: rgb(0, 178, 7); transform-origin: bottom; flex-direction: row; align-items: center; justify-content: space-evenly; position: absolute; left: auto; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; padding-left: 1px; bottom: 0;">
+                        <Bindings>
+                            <ui:DataBinding property="style.scale" data-source-path="SailDeployment" binding-mode="ToTarget"/>
+                        </Bindings>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="directional_display" style="flex-grow: 1; width: 250px; height: 250px; margin-top: 0; align-content: center;">
+                <ui:VisualElement name="boat" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/VectorGraphics/boat.svg?fileID=7388822144124034973&amp;guid=1f5b30fda36952f4cbdfa46ac1032b23&amp;type=3#boat&quot;); background-size: contain; rotate: -19deg; -unity-background-scale-mode: scale-to-fit; width: 50%; height: 50%; background-position-y: center; align-self: center; align-content: center; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; border-bottom-left-radius: 0; margin-top: 30px; margin-right: 30px; margin-bottom: 30px; margin-left: 30px; -unity-background-image-tint-color: rgb(139, 69, 19);">
+                    <ui:VisualElement name="sail" style="flex-grow: 0; background-image: url(&quot;project://database/Assets/VectorGraphics/boom.svg?fileID=7388822144124034973&amp;guid=561be00cbc2465942b1b6d31991ce935&amp;type=3#boom&quot;); background-size: contain; rotate: 0; transform-origin: top; height: 50%; top: 25%;">
+                        <Bindings>
+                            <ui:DataBinding property="style.rotate" data-source-path="SailRotation" binding-mode="ToTarget"/>
+                        </Bindings>
+                    </ui:VisualElement>
+                    <Bindings>
+                        <ui:DataBinding property="style.rotate" data-source-path="BoatRotation" binding-mode="ToTarget"/>
+                    </Bindings>
+                </ui:VisualElement>
+                <ui:VisualElement name="arrow" data-source-path="WindDirection" style="flex-grow: 0; background-image: url(&quot;project://database/Assets/VectorGraphics/arrow.svg?fileID=7388822144124034973&amp;guid=552f6486ef659f7469fe8f2de60cc170&amp;type=3#arrow&quot;); left: 50%; top: 50%; translate: -50% -50%; transform-origin: 50% 50%; justify-content: center; align-self: stretch; align-content: auto; height: 80%; width: 10%; flex-shrink: 0; flex-basis: auto; display: flex; position: absolute; -unity-background-image-tint-color: rgba(0, 178, 7, 0.42);">
+                    <Bindings>
+                        <ui:DataBinding property="style.rotate" data-source-path="value" binding-mode="ToTarget"/>
+                    </Bindings>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="rudder_position" style="flex-grow: 1; align-items: flex-start; justify-content: space-between; align-self: flex-start; align-content: flex-start; flex-direction: row;">
+            <ui:Label text="Rudder" name="rudder_label" style="color: rgb(255, 255, 255); -unity-text-align: middle-left;"/>
+            <ui:VisualElement name="position_slider" style="flex-grow: 1; flex-direction: row; background-color: rgb(255, 255, 255); width: auto; height: 20%; align-self: center; align-items: center; justify-content: center; margin-top: 8px; margin-right: 8px; margin-bottom: 8px; margin-left: 8px;">
+                <ui:VisualElement name="rudder_position_fill" style="height: 100%; width: 50%; background-color: rgb(0, 178, 7); transform-origin: left; scale: -1 1; flex-direction: row; align-items: center; justify-content: space-evenly; position: absolute; left: 50%; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;">
+                    <Bindings>
+                        <ui:DataBinding property="style.scale" data-source-path="RudderRotation" binding-mode="ToTarget"/>
+                    </Bindings>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="wind_speed" style="flex-grow: 1; height: 20px; -unity-text-auto-size: none; -unity-text-generator: standard;">
+            <ui:Label name="wind_speed_label" text="0.0 m/s" data-source-path="WindSpeed" style="flex-grow: 1; -unity-text-align: middle-center; color: rgb(255, 255, 255); padding-top: 4px; padding-right: 2px; padding-bottom: 4px; padding-left: 1px;">
+                <Bindings>
+                    <ui:DataBinding property="text" binding-mode="ToTarget"/>
+                </Bindings>
+            </ui:Label>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

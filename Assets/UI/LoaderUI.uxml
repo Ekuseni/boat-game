@@ -1,0 +1,13 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements"
+         xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd"
+         editor-extension-mode="False">
+    <ui:VisualElement name="background"
+                      style="background-color: rgb(60, 60, 60); width: 100%; height: 100%; align-content: center; align-items: center; justify-content: space-around;">
+        <ui:VisualElement name="content"
+                          style="width: 500px; align-self: center; justify-content: center; align-content: center; align-items: stretch; flex-direction: column;">
+            <ui:Label text="BOAT GAME" name="Label"
+                      style="align-self: center; -unity-text-align: upper-center; font-size: 42px; color: rgb(188, 188, 188); -unity-font-style: bold;"/>
+            <ui:ProgressBar value="0" name="progress" title="Loading..."/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
